@@ -19,7 +19,7 @@ model_female = joblib.load("height_model_female.pkl")
 # -----------------------
 gender = st.radio("성별 선택", ["남자", "여자"])
 
-st.sidebar.header("머신러닝 모델 설계 실습 (다중회귀)")
+st.sidebar.header("머신러닝 모델 설계 실습")
 
 # -----------------------
 # 입력 UI + 모델 선택
@@ -46,4 +46,5 @@ else:
 if st.button("키 예측하기"):
     prediction = model.predict(X)
     st.success(f"예측 키: {prediction[0]:.1f} cm")
+
 

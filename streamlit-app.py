@@ -5,7 +5,7 @@ import joblib
 # -----------------------
 # 페이지 설정
 # -----------------------
-st.title("신체 정보를 이용한 키 예측 머신러닝 모델")
+st.header("신체 정보를 이용한 키 예측 머신러닝 모델")
 st.write("신체 정보를 입력하면 키를 예측합니다.")
 
 # -----------------------
@@ -46,3 +46,4 @@ else:
 if st.button("키 예측하기"):
     prediction = model.predict(X)
     st.success(f"예측 키: {prediction[0]:.1f} cm")
+
